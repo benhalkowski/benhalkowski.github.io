@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Halkowski</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon-57.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!-- BODY -->
+<body>
+
+  <header>
+
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img height="100%" src="laser-photos/Sailing_laser.svg" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="projects.html">Projects</a></li>
+              <li><a href="recipes.html">Recipes</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+  </body>
+
+  <main>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+
+          <p style="text-align: center; background-color:#FFFF00;">Github links coming soon.</p>
+
+
+
+          <h3>LASER Research</h3>
+          <h5>Honors Thesis - William and Mary Physics, 2018</h5>
+
+          <div class="center-align">
+            <img class="box-shadow" width="80%" src="wide_laser.JPG" alt="laser wide shot">
+          </div>
+          <div class="center-align" style="padding-top: 30px">
+            <img class="box-shadow" width="50%" src="resonance.JPG" alt="laser wide shot">
+          </div>
+          <p class="pt-5">The top photos consist of a wide shot of the laser apparatus itself (top) and a picture of the rubdidium resonance captured on a TV moniter (bottom). To capture the latter, we shoot the laser through a glass vapor cell (rubidium) and position a camera, which is sensitive in the infared, near the glass tube to observe the effects. When the laser frequency matches the resonant frequency of rubidium, we see the bright trail through the vapor like the shot above!</p>
+
+          <h3 class="pt-5 center-align">Feed-forward Current / Piezo Control Box</h3>
+
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="center-align" style="padding-top: 30px">
+                <img class="box-shadow" src="laser-photos/setup3.jpg" width="80%" alt="">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="center-align" style="padding-top: 30px">
+                <img class="box-shadow" src="laser-photos/setup2.jpg" width="80%" alt="">
+              </div>
+            </div>
+          </div>
+
+
+
+          <p class="pt-5">The goal of this is simply to vary the current given to the laser together with the piezo voltage which controls the angle of our diffraction grating in order to have more control while scanning across frequency.</p>
+          <p>The current varies inversely with frequency while the voltage given to the piezo varies proportionally. If we were very talented / lucky, we wouldn't need the control box and could instead vary the two simultaneously by hand. In order to make things easier however, we simply construct a box to do it for us. The effect is clear.</p>
+
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="center-align" style="padding-top: 30px">
+                <img class="box-shadow" src="laser-photos/current_out.jpg" width="80%" alt="">
+                <p></p>
+                <p class="shrink-text">This is the current output.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="center-align" style="padding-top: 30px">
+                <img class="box-shadow" src="laser-photos/piezo_out.jpg" width="80%" alt="">
+                <p></p>
+                <p class="shrink-text">This is the piezo voltage output.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <p class="pt-5">For a given input voltage, the two outputs are inversely proportional to one another just like we want!</p>
+          <p>Further adjustments can be made by tuning any of the three variable resistors in the circuit above. Such adjustments will be necessary when we actually connect the box to the laser.</p>
+
+          <p>Another requirement of the design is for the piezo to stay postivie at all costs. This is managed by a diode connected after the op amp before the connection of the R-F resistor such that extra current can be drawn when we see a negative voltage. The proof is below.</p>
+
+          <div class="center-align">
+            <img src="laser-photos/OP27_with_diode_circuit_v1.png" width="60%" alt="">
+            <p></p>
+            <p class="shrink-text">Here is the general schematic for the op amp described in the paragraph above.</p>
+          </div>
+
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="center-align" style="padding-top: 30px">
+                <img class="box-shadow" src="laser-photos/piezo_not_neg.jpg" width="80%" alt="">
+                <p></p>
+                <p class="shrink-text">The lower signal (voltage input) has gone negative and we see the upper signal (piezo output) clipping off and not going negative. This is exactly what we want.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="center-align" style="padding-top: 30px">
+                <img class="box-shadow" src="laser-photos/piezo_not_neg_2.jpg" width="80%" alt="">
+                <p></p>
+                <p class="shrink-text">Even when signal is completely negative, peizo output is positive.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <hr width="80%">
+          <h3>Android "I'm Bored" Application (Ongoing)</h3>
+          <hr width="80%">
+          <h3>Android Maze Application</h3>
+          <hr width="80%">
+
+          <h3>Java Applet Maze Application</h3>
+          <hr width="80%">
+
+          <h3>Songwriting and Production</h3>
+
+          <!-- <div class="project-detail">
+            <p>Over the last couple of years, I’ve been writing and recording my own original music.
+              Drawing on my training in classical piano, I’ve written and assembled a number of tracks.
+              Take a listen! (Ben Philip comes from my shortened first name and middle name — Philip).</p>
+
+          </div> -->
+
+
+          <div class="row">
+            <div class="col-sm-6 youtube-music-div" >
+              <h2>Music on Youtube</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/PFmJ6UPq0NU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-sm-6 soundcloud-music-div">
+              <h2>Music on Soundcloud</h2>
+
+              <iframe width="75%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/128541769&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+
+            </div>
+          </div>
+
+
+          <p style="text-align: center; padding-bottom: 30px; padding-top: 70px">Video, breif exposé, athletics and music. </p>
+
+          <div class="videoWrapper">
+            <!-- Copy & Pasted from YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JNjxWCP8CWk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </main>
+
+  <footer>
+    <p>Created by Benjamin Halkowski, 2018</p>
+  </footer>
+
+
+</html>
